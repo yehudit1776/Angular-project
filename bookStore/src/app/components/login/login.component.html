@@ -1,0 +1,36 @@
+
+
+<div class="testbox">
+  <h1>LogIn</h1>
+
+  <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" >
+      <hr>
+ 
+  <hr>
+
+
+ 
+
+  <label id="icon" for="name"><i class="icon-pencil"></i></label>
+  <input type="text" name="userName"  placeholder="User Name" required minlength="3" maxlength="15"  formControlName="userName"pattern="[A-Za-z]*"/>
+  <div *ngIf="userName.invalid && (userName.dirty || userName.touched || submitted)" class="alert alert-danger">
+    <div *ngIf="userName.errors.required">UserName is required.</div>
+    <div *ngIf="userName.errors.minlength">UserName must be at least 3 characters long.</div>
+    <div *ngIf="userName.errors.maxlength">UserName must be maximum 15 characters long.</div>
+    <div *ngIf="userName.errors.pattern">UserName must contain only letters</div>
+  </div>
+  
+  <label id="icon" for="password"><i class="icon-pencil"></i></label>
+  <input type="password" name="password"  placeholder=" password" required minlength="5" maxlength="10"  formControlName="password"/>
+  <div *ngIf="password.invalid && (password.dirty || password.touched || submitted)" class="alert alert-danger">
+    <div *ngIf="password.errors.required">password is required.</div>
+    <div *ngIf="password.errors.minlength">password must be at least 5 characters long.</div>
+    <div *ngIf="password.errors.maxlength">password must be maximum 10 characters long.</div>
+
+  </div>
+
+  
+   
+   <input type="submit" class="button" value="Register" [disabled]="profileForm.invalid">
+  </form>
+</div>

@@ -1,0 +1,6 @@
+<div>
+  <a routerLink="Books/login" *ngIf="!currentUser">Login </a>
+  <a routerLink="Books/register" *ngIf="!currentUser"> Register </a>
+  <a  routerLink="Books/login" *ngIf="currentUser"> Log Out </a>
+  <router-outlet></router-outlet>
+</div>
