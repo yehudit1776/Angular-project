@@ -19,6 +19,7 @@ import { routing }        from './app.routing';
 import { FormsModule, ReactiveFormsModule } from '../../node_modules/@angular/forms';
 import { UserService } from './shared/services/user.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BooksService } from './shared/services/books.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,routing,FormsModule,ReactiveFormsModule,HttpClientModule
   ],
-  providers: [UserService],
+  providers: [UserService,BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

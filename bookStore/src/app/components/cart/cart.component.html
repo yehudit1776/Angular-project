@@ -1,3 +1,5 @@
-<p>
-  cart works!
-</p>
+
+<h1>MyCart</h1>
+<div *ngFor="let cart of cartProducts">
+<app-cart-preview [book]="cart"></app-cart-preview>
+</div>

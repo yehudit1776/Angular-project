@@ -137,10 +137,15 @@ body {
     opacity: 1 !important;
   }
   .container {
-    max-width: 800px;
+    /* max-width: 800px;
     min-width: 640px;
-    margin: 0 auto;
-  }
+    margin: 0 auto; */
+        max-width: 20%;
+    min-width: 20%;
+    /* margin: 0 auto; */
+    float: left;
+}
+ 
   .container:before,
   .container:after {
     content: '';

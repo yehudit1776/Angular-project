@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   <div class="container">
     <span id="home">
       <span class="ion-camera"></span>
@@ -12,7 +12,8 @@
           <a href="Books/products">Products</a>
         </li>
         <li>
-          <a href="Books/cart">Cart</a>
+            <a href="Books/cart" *ngIf="myLocalstrage.getItem('currentUser')">Cart</a>
+       
         </li>
 
       </ul>
@@ -23,10 +24,134 @@
     <span id="menu">
     
         <span>Hello </span>
-        <span>{{user.name}}</span>
+        <span>{{user.userName}}</span>
         
      
       <img src={{user.img}} style="width: 20px;height: 20px;">
     </span>
   </div>
 </header>
+
+<!-- <header>
+    <h1>Your Book Store</h1>
+    <nav> 
+
+        <a href="Books/myAcount">MyAccount</a>
+        <a href="Books/products">Products</a>
+        <a href="Books/cart" *ngIf="myLocalstrage.getItem('currentUser')">Cart</a>
+        <span>Hello </span>
+        <span>{{user.userName}}</span>
+        
+     
+      <img src={{user.img}} style="width: 20px;height: 20px;">
+    </nav>
+
+  </header> -->
+
+
+<!-- <header id='header'>
+      <div class='wrapper'>
+        <h1>
+          <a href='#'>
+            Your Books Store
+           
+          </a>
+        </h1>
+        <a class='settings' href='#'>settings</a>
+     
+        <a class='username' href='#'> <span>Hello </span>
+          <span>{{user.userName}}</span>
+          
+       
+        <img src={{user.img}} style="width: 20px;height: 20px;"></a>
+       
+        
+        <nav>
+          <ul id='menu'>
+            
+            <li>
+                <a href="Books/myAcount">MyAccount</a>
+            </li>
+            <li>
+                <a href="Books/products">Products</a>
+            </li>
+            <li>
+                <a href="Books/cart" *ngIf="myLocalstrage.getItem('currentUser')">Cart</a>
+            </li>
+           
+           
+          </ul>
+        </nav>
+        <a class='menu-link' href='#menu'>Menu</a>
+      </div>
+    </header>  -->
+
+<div class="header header-wrap-three">
+  <div class="container cf">
+    <div class="header-top cf">
+      <div class="four col first-col">
+        <div class="icons">
+          <i class="fa fa-facebook" aria-hidden="true"></i>
+          <i class="fa fa-twitter" aria-hidden="true"></i>
+          <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="four col second-col">
+        <h2 class="logo">
+          <a href="#">Your Book Store</a>
+        </h2>
+      </div>
+      <div class="four col third-col">
+        <div class="icons icons-hide">
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+          <i class="fa fa-search" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom cf">
+      <div class="menu-toggle">Menu</div>
+      <div class="mobile-nav">
+        <ul>
+          <li>
+            <a href="Books/myAcount">MyAccount</a>
+          </li>
+          <li>
+            <a href="Books/products">Products</a>
+          </li>
+          <li>
+            <a href="Books/cart" *ngIf="myLocalstrage.getItem('currentUser')">Cart</a>
+          </li>
+
+          <div class="icons icons-responsive">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </div>
+        </ul>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li>
+            <a href="Books/myAcount">MyAccount</a>
+          </li>
+          <li>
+            <a href="Books/products">Products</a>
+          </li>
+          <li>
+            <a href="Books/cart" *ngIf="myLocalstrage.getItem('currentUser')">Cart</a>
+          </li>
+          <Li>
+            <b>
+              <span>Hello </span>
+              <span>{{user.userName}}</span>
+
+
+              <img src={{user.img}} style="width: 20px;height: 20px;">
+            </b>
+          </Li>
+        </ul>
+
+
+      </div>
+    </div>
+  </div>
+</div>

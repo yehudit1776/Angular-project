@@ -38,6 +38,8 @@ export class RegisterComponent implements OnInit {
       console.log("user", this.user);
 
       this.userService.add(this.user).subscribe(p=>console.log("p",p));
+      localStorage.setItem("currentUser",JSON.stringify(this.user));
+      this.userService.subject.next();
      
 
     }

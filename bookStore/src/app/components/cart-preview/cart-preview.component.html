@@ -1,3 +1,26 @@
-<p>
-  cart-preview works!
-</p>
+
+<div class="container">
+
+  <!-- Normal Demo-->
+  <div class="column">
+    
+    <!-- Post-->
+    <div class="post-module">
+      <!-- Thumbnail-->
+      <div class="thumbnail">
+      <img src={{book["volumeInfo"]["imageLinks"]}}>
+      </div>
+      <!-- Post Content-->
+      <div class="post-content">
+         
+          <div class="category"> <input type="button" value="RemoveMe" (click)="RemoveMe()"></div>
+        <h1 class="title">{{book["volumeInfo"]["title"]}}</h1>
+        <h2 class="sub_title">{{book["volumeInfo"]["subtitle"]}}</h2>
+        
+      
+      </div>
+    </div>
+  </div>
+  <!-- Hover Demo-->
+  
+</div>
