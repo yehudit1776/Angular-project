@@ -18,9 +18,10 @@ ng serve --open
 ## Run this app in dev mode- server side:
 ```bash
 clone 'https://github.com/yehudit1776/Angular-project.git'
-cd bookStore-frontend
+cd nodejs-books-project
 npm i
 npm start
 ```
 
-##### See live demo:
+##### See live demo: 'https://my-books-store.herokuapp.com/bookStore/home'
+

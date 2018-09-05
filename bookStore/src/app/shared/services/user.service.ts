@@ -13,14 +13,14 @@ export class UserService {
 
 add(user:User){
  
-  return this.httpClient.post("http://localhost:3500/api/user",user);
+  return this.httpClient.post("https://my-books-store.herokuapp.com/api/user",user);
 }
 
 login(userName:string,password:string)
 {
   
   let js={"userName":userName,"password":password};
-  return this.httpClient.post("http://localhost:3500/api/login",js);
+  return this.httpClient.post("https://my-books-store.herokuapp.com/api/login",js);
 }
 
 }

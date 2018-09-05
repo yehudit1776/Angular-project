@@ -16,9 +16,10 @@ import { CartPreviewComponent } from './components/cart-preview/cart-preview.com
 import{AuthGuard} from'./shared/authguard'
 
 const appRoutes: Routes = [
+    { path: 'bookStore/ProductDetails/:book', component: ProductDetailsComponent },
     { path: 'bookStore/home', component: HomeComponent },
     { path: '', component: HomeComponent }, 
-    { path: 'bookStore/ProductDetails/:book', component: ProductDetailsComponent },
+
     { path: 'bookStore/myAcount', component: MyAcountComponent,children:[
         { path: 'bookStore/login', component: LoginComponent },
         { path: 'bookStore/register', component: RegisterComponent },
@@ -30,7 +31,7 @@ const appRoutes: Routes = [
     { path: 'bookStore', redirectTo: 'bookStore/home',},
    
 
-    // otherwise redirect to home
+
     { path: '**', redirectTo: 'Books' }
 ];
 
