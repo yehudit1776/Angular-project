@@ -23,5 +23,5 @@ npm i
 npm start
 ```
 
-##### See live demo: https://my-books-store.herokuapp.com/bookStore/home
-
+##### See live demo: https://my-books-store.herokuapp.com
+                     
