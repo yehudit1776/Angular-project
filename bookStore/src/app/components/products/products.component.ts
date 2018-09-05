@@ -22,7 +22,7 @@ export class ProductsComponent implements OnInit {
 
   }
   searchBooks(val) {
-    this.booksservice.getBooks(val).subscribe(res => { this.books = JSON.parse(JSON.stringify(res)); console.log(this.books) });
+    this.booksservice.getBooks(val).subscribe(res => { this.books = JSON.parse(JSON.stringify(res["items"])); console.log(this.books) });
     localStorage.setItem("searchValue", val);
 
   }

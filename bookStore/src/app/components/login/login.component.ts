@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators, NgForm } from '@angula
 import { User } from '../../shared/models/user';
 import { UserService } from '../../shared/services/user.service';
 import { JsonPipe } from '../../../../node_modules/@angular/common';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
 
   profileForm: FormGroup;
   submitted: boolean = false;
-  constructor(private fb: FormBuilder, private userService: UserService) {
+  constructor(private fb: FormBuilder, private userService: UserService,private router:Router) {
    
     localStorage.removeItem("currentUser");
     this.userService.subject.next();
@@ -45,7 +46,10 @@ export class LoginComponent implements OnInit {
         if (this.user) {
           localStorage.setItem("currentUser", JSON.stringify(this.user));
           this.userService.subject.next();
+          this.router.navigate(["bookStore/home"])
         }
+        else
+        alert("לא נמצא במערכת משתמש העונה לפרטיםפ שהוכנסו")
       });
 
     }

@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators, NgForm } from '@angular/forms';
 import { User } from '../../shared/models/user';
 import { UserService } from '../../shared/services/user.service';
+import { Router } from '../../../../node_modules/@angular/router';
 
 
 @Component({
@@ -17,7 +18,7 @@ export class RegisterComponent implements OnInit {
   
   profileForm: FormGroup;
   submitted: boolean = false;
-  constructor(private fb: FormBuilder,private userService:UserService ) {
+  constructor(private fb: FormBuilder,private userService:UserService,private router:Router ) {
    
   }
   ngOnInit() {
@@ -40,7 +41,7 @@ export class RegisterComponent implements OnInit {
       this.userService.add(this.user).subscribe(p=>console.log("p",p));
       localStorage.setItem("currentUser",JSON.stringify(this.user));
       this.userService.subject.next();
-     
+      this.router.navigate(["bookStore/home"])
 
     }
   }

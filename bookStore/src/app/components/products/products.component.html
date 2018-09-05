@@ -1,3 +1,4 @@
+
 <div class="wrap">
   <div class="search">
     <input type="text" class="searchTerm" placeholder="What are you looking for?" (keyup)="searchBooks($event.target.value)" id="searchInput">
@@ -8,7 +9,7 @@
 </div>
 
 
-<div *ngFor="let book of books.items" class="contain">
+<div *ngFor="let book of books" class="contain">
 
   <app-product-preview [book]="book"></app-product-preview>
 </div>

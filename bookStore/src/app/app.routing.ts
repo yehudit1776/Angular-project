@@ -16,18 +16,18 @@ import { CartPreviewComponent } from './components/cart-preview/cart-preview.com
 import{AuthGuard} from'./shared/authguard'
 
 const appRoutes: Routes = [
-    { path: 'Books/home', component: HomeComponent },
+    { path: 'bookStore/home', component: HomeComponent },
     { path: '', component: HomeComponent }, 
-    { path: 'Books/ProductDetails/:book', component: ProductDetailsComponent },
-    { path: 'Books/myAcount', component: MyAcountComponent,children:[
-        { path: 'Books/login', component: LoginComponent },
-        { path: 'Books/register', component: RegisterComponent },
+    { path: 'bookStore/ProductDetails/:book', component: ProductDetailsComponent },
+    { path: 'bookStore/myAcount', component: MyAcountComponent,children:[
+        { path: 'bookStore/login', component: LoginComponent },
+        { path: 'bookStore/register', component: RegisterComponent },
        
 
     ] },
-    { path: 'Books/products', component: ProductsComponent },
-    { path: 'Books/cart', component: CartComponent  ,canActivate: [AuthGuard]},
-    { path: 'Books', redirectTo: 'Books/home',},
+    { path: 'bookStore/products', component: ProductsComponent },
+    { path: 'bookStore/cart', component: CartComponent  ,canActivate: [AuthGuard]},
+    { path: 'bookStore', redirectTo: 'bookStore/home',},
    
 
     // otherwise redirect to home
